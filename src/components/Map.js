@@ -1,7 +1,6 @@
 import  GoogleMapReact from 'google-map-react';
 import { FaLocationArrow } from "react-icons/fa"
 
-
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
   const handleMapChange = (e) => {
     setCoordinates({ lat: e.center.lat, lng: e.center.lng });

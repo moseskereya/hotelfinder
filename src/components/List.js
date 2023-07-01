@@ -4,20 +4,12 @@ import spinner from './spinner.gif';
 const List = ({ hotels }) => {
         if (hotels === undefined  || hotels.length === 0) {
      return (
-         <div style={{
-             display: 'flex',
-             justifyContent: 'center',
-             alignItems: 'center',
-             height: '100vh',
-             width: '400px'
-         }}>
         <div className="spinner">
             <img
                 src={spinner}
                 alt="Loading..."
             />
         </div>
-       </div>
    );
     } else {
       return (

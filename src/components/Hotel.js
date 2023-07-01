@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaLocationArrow} from "react-icons/fa"
-import { FaDollarSign } from "react-icons/fa"
+import { FaClock } from "react-icons/fa"
 import { FcRating } from "react-icons/fc"
 import {FcPhone} from "react-icons/fc"
 
@@ -18,20 +18,21 @@ const Hotel = ({hotel}) => {
           </div>
           <div className='inner_content'>
               <p>
-                <FaLocationArrow/> {hotel.location_string}
+                <FaLocationArrow color='red' fontSize={15}/> {hotel.location_string}
               </p>
                 <p>
-                  <FcRating/> {Number(hotel.num_reviews)}
+                  <FcRating fontSize={15}/> {Number(hotel.rating)}
                 </p>
           </div>
             <div className='inner_content'>
                 <p>
-                  <FaDollarSign /> {hotel.price}
+                  Price from  {hotel.price}
               </p>
               <p>
-                 <FcPhone size={18}/> {hotel.phone}
+                 Level {hotel.price_level}
               </p>
-             </div>
+          </div>
+          <h6> Ranking  {hotel.ranking}</h6>
      </div>
   )
 }
