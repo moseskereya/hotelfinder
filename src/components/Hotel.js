@@ -1,8 +1,6 @@
 import React from 'react'
 import { FaLocationArrow} from "react-icons/fa"
-import { FaClock } from "react-icons/fa"
 import { FcRating } from "react-icons/fc"
-import {FcPhone} from "react-icons/fc"
 
 
 const Hotel = ({hotel}) => {
