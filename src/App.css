@@ -136,6 +136,10 @@ position: absolute;
     .spinner{
         display: none;
     }
+    
+    .search_hotel{
+        display: none;
+    }
 
     .hotel_container {
         margin: 10px 0;
