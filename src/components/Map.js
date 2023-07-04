@@ -51,8 +51,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
       key={hotel.location_id}
       lat={parseFloat(latitude)}
       lng={parseFloat(longitude)}
-      className="marker-wrapper"
-    >
+      className="marker-wrapper">
       <div className="marker-label" onClick={() => handleMarkerClick(hotel)}>
         {name}
       </div>
@@ -80,15 +79,15 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
             <div className="popup-card">
               <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={selectedHotel.name} />
               <h3>{selectedHotel.name}</h3>
-                   <div>
-                        <FcRating fontSize={10} />
-                        <FcRating fontSize={10}/>
-                        <FcRating fontSize={10}/>
-                        <FcRating fontSize={10}/>
-                            <span>
-                               {Number(selectedHotel.rating)}
-                            </span>
-                        </div>            
+                 <div>
+                    <FcRating fontSize={10} />
+                    <FcRating fontSize={10}/>
+                    <FcRating fontSize={10}/>
+                    <FcRating fontSize={10}/>
+                        <span>
+                            {Number(selectedHotel.rating)}
+                        </span>
+                </div>            
               <button onClick={handleClosePopup}>Close</button>
             </div>
           </div>
@@ -99,9 +98,11 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
             <div className="user-location-dot"></div>
           </div>
         )}
-              {markers}
-                 <FaLocationArrow className='go-back-home' fontSize={10} onClick={() => handleGoBackHome} />
-      </GoogleMapReact>
+      {markers}
+          </GoogleMapReact>
+         <div className="go-back-home" onClick={handleGoBackHome}>
+        <FaLocationArrow />
+      </div>
     </div>
   );
 };
