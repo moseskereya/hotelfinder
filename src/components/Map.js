@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { FcRating } from "react-icons/fc"
+import { FcRating} from "react-icons/fc"
+import { FaLocationArrow} from "react-icons/fa"
+
 
 
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
@@ -33,6 +35,14 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
      const handleClosePopup = () => {
     setSelectedHotel(null);
   };
+
+ const handleGoBackHome = () => {
+    if (userLocation) {
+      setCoordinates({ lat: userLocation.lat, lng: userLocation.lng });
+      setBounds(null);
+    }
+  };
+
     
   const markers = hotels?.map((hotel) => {
   const { latitude, longitude, name } = hotel;
@@ -89,7 +99,8 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
             <div className="user-location-dot"></div>
           </div>
         )}
-        {markers}
+              {markers}
+                 <FaLocationArrow className='go-back-home' fontSize={10} onClick={() => handleGoBackHome} />
       </GoogleMapReact>
     </div>
   );

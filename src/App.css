@@ -30,8 +30,7 @@ width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #292a38;
-    color: white;
+    background-color: #ffffff;
 }
 
 .header_title{
@@ -70,6 +69,28 @@ nav ul li{
     -webkit-box-shadow: 8px 5px 5px 0px rgba(161, 161, 161, 0.75);
     -moz-box-shadow: 8px 5px 5px 0px rgba(194, 194, 194, 0.75);
     margin: 20px 0;
+}
+.go-back-home {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.go-back-home svg {
+    font-size: 24px;
+}
+
+.go-back-home:hover {
+    background-color: #f1f1f1;
 }
 
 .hotel_title{
