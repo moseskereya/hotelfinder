@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { FaLocationArrow } from "react-icons/fa"
-
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
   const [userLocation, setUserLocation] = useState(null);
 
@@ -39,7 +37,6 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
       <div className="marker-label" onClick={() => handleMarkerClick(hotel)}>
         {name}
       </div>
-      <FaLocationArrow className="marker-icon" />
     </div>
   );
 });
