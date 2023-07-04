@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
+import { FcRating } from "react-icons/fc"
+
 
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     const [userLocation, setUserLocation] = useState(null);
@@ -68,6 +70,15 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
             <div className="popup-card">
               <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={selectedHotel.name} />
               <h3>{selectedHotel.name}</h3>
+                   <div>
+                        <FcRating fontSize={10} />
+                        <FcRating fontSize={10}/>
+                        <FcRating fontSize={10}/>
+                        <FcRating fontSize={10}/>
+                            <span>
+                               {Number(selectedHotel.rating)}
+                            </span>
+                        </div>            
               <button onClick={handleClosePopup}>Close</button>
             </div>
           </div>
