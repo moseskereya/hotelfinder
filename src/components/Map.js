@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
+
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
-  const [userLocation, setUserLocation] = useState(null);
+    const [userLocation, setUserLocation] = useState(null);
+     const [selectedHotel, setSelectedHotel] = useState(null);
 
   useEffect(() => {
     // Get user's current location using browser geolocation API
@@ -20,10 +22,15 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
   const handleMapChange = (e) => {
     setCoordinates({ lat: e.center.lat, lng: e.center.lng });
     setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
+    };
+    
+    const handleMarkerClick = (hotel) => {
+        setSelectedHotel(hotel);
+    };
+    
+     const handleClosePopup = () => {
+    setSelectedHotel(null);
   };
- const handleMarkerClick = (hotel) => {
-   console.log('Clicked hotel:', hotel);
-};
     
   const markers = hotels?.map((hotel) => {
   const { latitude, longitude, name } = hotel;
@@ -48,14 +55,25 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
         bootstrapURLKeys={{ key: 'AIzaSyCMlhEtuBkewUOBU5bRiQEIQiUaeo3DJII' }}
         defaultCenter={coordinates}
         center={coordinates}
-        defaultZoom={14}
+        defaultZoom={16}
         margin={[50, 50, 50, 50]}
         options={{
           disableDefaultUI: true,
           zoomControl: true,
           draggable: true
         }} onChange={handleMapChange}>
-             {userLocation && (
+        
+        {selectedHotel && (
+          <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
+            <div className="popup-card">
+              <img src={selectedHotel.image} alt={selectedHotel.name} />
+              <h3>{selectedHotel.name}</h3>
+              <button onClick={handleClosePopup}>Close</button>
+            </div>
+          </div>
+        )}
+        
+        {userLocation && (
           <div lat={userLocation.lat} lng={userLocation.lng}>
             <div className="user-location-dot"></div>
           </div>

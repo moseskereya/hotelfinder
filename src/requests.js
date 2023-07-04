@@ -7,7 +7,8 @@ export const getHotels = async (sw, ne) => {
             bl_latitude:sw.lat,
             tr_latitude:ne.lat,
             bl_longitude: sw.lng,
-            tr_longitude: ne.lng,
+             tr_longitude: ne.lng,
+            limit: '80',
          },
          headers: {
           'X-RapidAPI-Key': '30b169ac58msh98b233cda79c9d8p13f6f8jsnbe4decfb2741',

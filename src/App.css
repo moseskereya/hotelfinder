@@ -101,7 +101,7 @@ nav ul li{
     left: -20px;
     background-color: #fff;
     border-radius: 5px;
-    padding: 4px 8px;
+    padding: 6px 9px;
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
@@ -110,19 +110,39 @@ nav ul li{
 
 .popup-card {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
-    width: 300px;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    transform: translate(-50%, -100%);
-    pointer-events: none;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.marker-wrapper:hover .popup-card {
-    pointer-events: initial;
+.popup-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.popup-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.popup-card button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-card button:hover {
+    background-color: #0056b3;
 }
 /* curreent user location */
 
@@ -160,11 +180,6 @@ nav ul li{
 .search_hotel input{
     padding: 10px;
     width: 80%;
-}
-
-.marker-icon {
-    color: red;
-    font-size: 20px;
 }
 
 .marker-wrapper {
