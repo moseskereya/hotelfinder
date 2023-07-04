@@ -10,8 +10,8 @@ export const getHotels = async (sw, ne) => {
             tr_longitude: ne.lng,
          },
          headers: {
-            "X-RapidAPI-Key": "13aac9c6bcmsh25be358f6d5e3cdp18ef8bjsnfd1e0a3decc0" ,
-            'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+          'X-RapidAPI-Key': '30b169ac58msh98b233cda79c9d8p13f6f8jsnbe4decfb2741',
+          'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
         }
     });
      return data;

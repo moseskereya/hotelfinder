@@ -13,8 +13,8 @@ function App() {
     useEffect(() => {
         if (bounds) {
          getHotels(bounds.sw, bounds.ne)
-             .then((response) => {
-              console.log(response)
+            .then((response) => {
+            console.log(response)
              setHotels(response)
         }) 
         }
