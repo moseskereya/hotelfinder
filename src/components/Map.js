@@ -66,7 +66,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
         {selectedHotel && (
           <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
             <div className="popup-card">
-              <img src={selectedHotel.image} alt={selectedHotel.name} />
+              <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={ selectedHotel.name} />
               <h3>{selectedHotel.name}</h3>
               <button onClick={handleClosePopup}>Close</button>
             </div>
