@@ -112,6 +112,7 @@ nav ul li{
     position: absolute;
     top: 50%;
     left: 50%;
+    min-width: 250px;
     transform: translate(-50%, -50%);
     background-color: #fff;
     border-radius: 5px;
@@ -128,7 +129,8 @@ nav ul li{
 }
 
 .popup-card h3 {
-    font-size: 18px;
+    font-size: var(--secondary-font);
+    color: var(--secondary-font-color);
     margin-bottom: 10px;
 }
 
