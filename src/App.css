@@ -32,6 +32,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
+    box-shadow: 8px 5px 5px 0px rgba(168, 167, 167, 0.75);
+    -webkit-box-shadow: 8px 5px 5px 0px rgba(161, 161, 161, 0.75);
+     -moz-box-shadow: 8px 5px 5px 0px rgba(194, 194, 194, 0.75);
 }
 
 .header_title{
