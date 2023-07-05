@@ -8,7 +8,7 @@ const Hotel = ({ hotel }) => {
        <div key={hotel.id} className="movie_container">     
          <img src={hotel.photo ? hotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={ hotel.name} />
                     <div className="movie_content">
-                        <div>
+                        <div  className='rating'>
                         <FcRating fontSize={10} />
                         <FcRating fontSize={10}/>
                         <FcRating fontSize={10}/>
@@ -17,10 +17,10 @@ const Hotel = ({ hotel }) => {
                                {Number(hotel.rating)}
                             </span>
                         </div>
-                        <div>
+                    <div className='hotel_title'>
                            <h4>{hotel.name}</h4>
                      </div>
-                       <div>
+                       <div className='location'>
                             <FaLocationArrow color='red' fontSize={15}/> {hotel.location_string}
                         </div>
                     </div>

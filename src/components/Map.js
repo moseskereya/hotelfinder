@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import GoogleMapReact from 'google-map-react';
 import { FcRating} from "react-icons/fc"
-import { FaLocationArrow} from "react-icons/fa"
-
-
+import { FaLocationArrow } from "react-icons/fa"
 
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     const [userLocation, setUserLocation] = useState(null);
-     const [selectedHotel, setSelectedHotel] = useState(null);
+    const [selectedHotel, setSelectedHotel] = useState(null);
 
   useEffect(() => {
-    // Get user's current location using browser geolocation API
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -41,7 +38,8 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
       setCoordinates({ lat: userLocation.lat, lng: userLocation.lng });
       setBounds(null);
     }
-  };
+    };
+
 
     
   const markers = hotels?.map((hotel) => {
@@ -65,14 +63,14 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyCMlhEtuBkewUOBU5bRiQEIQiUaeo3DJII' }}
         defaultCenter={coordinates}
+        zoom={14}
         center={coordinates}
-        defaultZoom={16}
+        defaultZoom={14}
         margin={[50, 50, 50, 50]}
         options={{
           disableDefaultUI: true,
           zoomControl: true,
-          draggable: true
-        }} onChange={handleMapChange}>
+          draggable: true}} onChange={handleMapChange}>
         
         {selectedHotel && (
           <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
@@ -84,9 +82,9 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
                     <FcRating fontSize={10}/>
                     <FcRating fontSize={10}/>
                     <FcRating fontSize={10}/>
-                        <span>
-                            {Number(selectedHotel.rating)}
-                        </span>
+                    <span>
+                        {Number(selectedHotel.rating)}
+                    </span>
                 </div>            
               <button onClick={handleClosePopup}>Close</button>
             </div>
@@ -102,7 +100,10 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
           </GoogleMapReact>
          <div className="go-back-home" onClick={handleGoBackHome}>
         <FaLocationArrow />
-      </div>
+          </div>
+       {/* <div className="reset-zoom" onClick={setDefaultZoom}>
+          <FaHome />
+        </div> */}
     </div>
   );
 };
