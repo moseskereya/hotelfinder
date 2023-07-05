@@ -68,9 +68,13 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
         options={{
-          disableDefaultUI: true,
-          zoomControl: true,
-          draggable: true}} onChange={handleMapChange}>
+            disableDefaultUI: true,
+            gestureHandling: 'greedy',
+           zoomControl: true,
+                  draggable: true
+              }} onChange={handleMapChange}
+              
+          >
         
         {selectedHotel && (
           <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
