@@ -89,7 +89,9 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
                     <span>
                         {Number(selectedHotel.rating)}
                      </span>
+                    <p>Hotel reviews {Number(selectedHotel.num_reviews)}</p>
                     <p>{selectedHotel.ranking}</p>
+                              
                 </div>            
               <button onClick={handleClosePopup}>Close</button>
             </div>
