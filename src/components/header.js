@@ -14,7 +14,7 @@ const Header = ({ setCoordinates }) => {
         <div className='header_title'>Hotel Finder</div>
         <div className="search_hotel_location">
             <Autocomplete onLoad={onLoad} onPlaceChanged={onplaceChange}>
-              <input type="text" placeholder='search yuor hotel' />
+              <input type="text" placeholder='Explore hotels now' />
             </Autocomplete>
         </div>
    </div>
