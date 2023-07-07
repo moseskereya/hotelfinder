@@ -325,6 +325,16 @@ position: absolute;
     .rating{
         display: none;
     }
+    .spinner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .spinner img{
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media screen and (max-width:375px) {
