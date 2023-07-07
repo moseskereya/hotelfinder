@@ -7,7 +7,7 @@ const Header = ({ setCoordinates }) => {
     const onplaceChange = () => {
         const lat = autocomplete.getPlace().geometry.location.lat();
         const lng = autocomplete.getPlace().geometry.location.lng();
-        setCoordinates(lat, lng)
+        setCoordinates({lat, lng})
     }
   return (
    <div className='header'>
