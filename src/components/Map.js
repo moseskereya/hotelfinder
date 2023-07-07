@@ -64,16 +64,16 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyCMlhEtuBkewUOBU5bRiQEIQiUaeo3DJII' }}
         defaultCenter={coordinates}
-        zoom={15}
+        zoom={12}
         center={coordinates}
-        defaultZoom={15}
+        defaultZoom={12}
         margin={[50, 50, 50, 50]}
         options={{
             disableDefaultUI: true,
             gestureHandling: 'greedy',
-           zoomControl: true,
-                  draggable: true
-              }} onChange={handleMapChange}>
+                  zoomControl: true, draggable: true
+              }}
+              onChange={handleMapChange}>
         
         {selectedHotel && (
           <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
