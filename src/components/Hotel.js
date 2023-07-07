@@ -23,7 +23,7 @@ const Hotel = ({ hotel }) => {
                        <div className='location'>
                             <FaLocationArrow color='red' fontSize={15}/> {hotel.location_string}
                         </div>
-                    </div>
+                </div>
          </div>
      </div>
   )

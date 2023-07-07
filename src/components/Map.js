@@ -62,11 +62,11 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
   return (
     <div className="map-container">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyCMlhEtuBkewUOBU5bRiQEIQiUaeo3DJII' }}
+        bootstrapURLKeys={{ key: 'AIzaSyAl5nMA3rjGiV58HYm1mSlqTmuBdkDmkMw' }}
         defaultCenter={coordinates}
-        zoom={12}
+        zoom={16}
         center={coordinates}
-        defaultZoom={12}
+        defaultZoom={16}
         margin={[50, 50, 50, 50]}
         options={{
             disableDefaultUI: true,
@@ -114,3 +114,4 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
 
 export default Map;
 
+//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-3.386925,36.682995&radius=800&keyword=hotels&key=AIzaSyAl5nMA3rjGiV58HYm1mSlqTmuBdkDmkMw

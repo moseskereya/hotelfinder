@@ -61,6 +61,7 @@ nav ul li{
     overflow: scroll;
     height: 100vh;
     z-index: 9999;
+    padding: 20px 8px ;
     background-color: #fff;
     box-shadow: 8px 5px 5px 0px rgba(168, 167, 167, 0.75);
     -webkit-box-shadow: 8px 5px 5px 0px rgba(161, 161, 161, 0.75);
@@ -224,9 +225,8 @@ position: absolute;
     z-index: 10;
 }
 
-/* .inner_content{
-    font-weight: bold;
-} */
+
+
 .hotel_container h6{
     color: gray;
     padding: 20px 0;
