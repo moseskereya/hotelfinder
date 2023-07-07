@@ -103,9 +103,9 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
           </div>
         )}
       {markers}
-          </GoogleMapReact>
+        </GoogleMapReact>
          <div className="go-back-home" onClick={handleGoBackHome}>
-        <FaLocationArrow />
+        <FaLocationArrow color='red' />
           </div>
     </div>
   );

@@ -93,6 +93,15 @@ nav ul li{
 .go-back-home:hover {
     background-color: #f1f1f1;
 }
+.search_hotel_location{
+    padding: 15px;
+}
+.search_hotel_location input{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-font-color);
+    margin: 0 15px ;
+}
 
 .hotel_title{
     font-size:14px;

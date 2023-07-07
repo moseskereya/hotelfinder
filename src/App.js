@@ -15,7 +15,7 @@ function App() {
          getHotels(bounds.sw, bounds.ne)
             .then((response) => {
             console.log(response)
-             setHotels(response)
+         setHotels(response?.filter((hotel) => hotel.name && hotel.num_reviews > 0))
         }) 
         }
     }, [coordinates, bounds]) 
@@ -27,9 +27,9 @@ function App() {
 
     return (
     <>
-        <Header />
+        <Header setCoordinates={setCoordinates} />
         <div className="app_container">
-            <List hotels={hotels}/>
+                <List hotels={hotels}/>
                 <Map
                 setCoordinates={setCoordinates}
                 setBounds={setBounds}
