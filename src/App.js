@@ -15,7 +15,7 @@ function App() {
          getHotels(bounds.sw, bounds.ne)
             .then((response) => {
             console.log(response)
-          setHotels(response.filter((hotel) => hotel.name && hotel.num_reviews > 0))
+          setHotels(response?.filter((hotel) => hotel.name && hotel.num_reviews > 0))
         }) 
         }
     }, [coordinates, bounds]) 
