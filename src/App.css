@@ -95,18 +95,16 @@ nav ul li{
     background-color: #f1f1f1;
 }
 .search_hotel_location{
-    padding: 15px;
+    padding: 20px;
 }
 .search_hotel_location input{
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid var(--secondary-font-color);
     margin: 0 15px ;
 }
 
-.hotel_title{
-    font-size:14px;
-}
+
 
 .header_content{
     display: flex;
@@ -176,6 +174,7 @@ nav ul li{
     cursor: pointer;
 }
 
+
 .popup-card button:hover {
     background-color: #0056b3;
 }
@@ -241,7 +240,13 @@ position: absolute;
         display: flex;
         flex-direction: column-reverse;
     }
-
+    .hotel_content{
+        display: flex;
+        align-items: center;
+    }
+    .hotel_content h4{
+        font-style: 10px;
+    }
     .map-container{
         height: 60vh;
     }
@@ -262,7 +267,7 @@ position: absolute;
     margin: 0 .6rem;
 }
 
-.movie_container img {
+.hotels-container img {
     width: 250px;
     height: 150px;
     margin: .5rem;
@@ -304,16 +309,20 @@ position: absolute;
         display: flex;
         overflow: scroll;
         width: 100%;
-        height: 300px;
+        height: 250px;
         background-color: #fff;
-        box-shadow: 8px 5px 5px 0px rgba(168, 167, 167, 0.75);
-        -webkit-box-shadow: 8px 5px 5px 0px rgba(161, 161, 161, 0.75);
-        -moz-box-shadow: 8px 5px 5px 0px rgba(194, 194, 194, 0.75);
         margin: 20px 0;
     }
 
-    .movie_content{
+    .hotel_content{
         display: flex;
+        align-items: center;
+    }
+      
+    .hotel_content h4 {
+      font-style: 14px;
+      font-weight: 500;
+      margin: 8px;
     }
 
     .hotel_container img {
@@ -339,15 +348,12 @@ position: absolute;
 
 @media screen and (max-width:375px) {
     .hotels_list {
-       display: flex;
-       overflow: scroll;
-        height: 220px;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 8px 5px 5px 0px rgba(168, 167, 167, 0.75);
-        -webkit-box-shadow: 8px 5px 5px 0px rgba(161, 161, 161, 0.75);
-        -moz-box-shadow: 8px 5px 5px 0px rgba(194, 194, 194, 0.75);
-        margin: 10px 0;
+    display: flex;
+    overflow: scroll;
+    height: 200px;
+     width: 100%;
+     background-color: #fff;
+    margin: 10px 0;
     }
  .hotel_container img {
      width: 95%;
@@ -360,8 +366,9 @@ position: absolute;
     .go-back-home {
      bottom: 120px;
     }
-  .hotel_title{
+  .hotel_title h4{
     font-size: 12px;
+    font-weight: 100;
     }
     .location{
         display: none;

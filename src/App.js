@@ -13,7 +13,7 @@ function App() {
     useEffect(() => {
         if (bounds) {
          getHotels(bounds.sw, bounds.ne)
-            .then((response) => {
+        .then((response) => {
             console.log(response)
           setHotels(response?.filter((hotel) => hotel.name && hotel.num_reviews > 0))
         }) 

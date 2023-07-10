@@ -62,7 +62,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
   return (
     <div className="map-container">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyAl5nMA3rjGiV58HYm1mSlqTmuBdkDmkMw' }}
+        bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEYS }}
         defaultCenter={coordinates}
         zoom={16}
         center={coordinates}
@@ -71,8 +71,9 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
         options={{
             disableDefaultUI: true,
             gestureHandling: 'greedy',
-                  zoomControl: true, draggable: true
-              }}
+            zoomControl: true,
+            draggable: true
+            }}
               onChange={handleMapChange}>
         
         {selectedHotel && (
