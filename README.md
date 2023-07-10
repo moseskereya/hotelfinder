@@ -1,4 +1,5 @@
-[Screenshot (625)](https://github.com/moseskereya/hotelfinder/assets/49228545/3ec9a1f2-4fc0-4cba-afbc-bdac3589d358)
+
+![Screenshot (625)](https://github.com/moseskereya/hotelfinder/assets/49228545/9e08757e-7e94-40d0-b0e2-122cdc79b3ca)
 
 Hotel Booking App Documentation
 Overview
