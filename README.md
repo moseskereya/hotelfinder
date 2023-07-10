@@ -1,6 +1,8 @@
 
 ![Screenshot (625)](https://github.com/moseskereya/hotelfinder/assets/49228545/9e08757e-7e94-40d0-b0e2-122cdc79b3ca)
 
+
+
 Hotel Booking App Documentation
 Overview
 The Hotel Booking App is a web application that allows users to search and book hotels in a specific location. The app utilizes the React framework and integrates with Google Maps to provide an interactive map interface for users to explore available hotels.
