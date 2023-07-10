@@ -3,11 +3,11 @@
 
 
 
-Hotel Booking App Documentation
-Overview
+**Hotel Booking App Documentation**
+**Overview**
 The Hotel Booking App is a web application that allows users to search and book hotels in a specific location. The app utilizes the React framework and integrates with Google Maps to provide an interactive map interface for users to explore available hotels.
 
-Prerequisites
+**Prerequisites**
 Before running the app, make sure you have the following set up:
 
 Node.js installed on your machine
@@ -15,7 +15,7 @@ Google Maps API key
 Installation
 Follow these steps to set up and run the Hotel Booking App:
 
-Clone the repository:
+**Clone the repository:**
 
 bash
 Copy code
@@ -40,7 +40,6 @@ Open the src/config.js file.
 Replace 'YOUR_API_KEY' with your Google Maps API key.
 Start the development server:
 
-sql
 Copy code
 npm start
 Open the app in your browser:
@@ -73,7 +72,7 @@ The "Take me back home" button resets the map's center and zoom level to the ini
 Customization
 The Hotel Booking App is designed to be customizable. You can modify various aspects of the app to fit your specific requirements:
 
-Styling:
+**Styling:**
 
 Customize the CSS styles in the src/App.css file to change the appearance of the app components.
 Adjust the styles of markers, modals, search bar, and other UI elements to match your design preferences.
@@ -91,7 +90,7 @@ Ensure that you have a stable internet connection.
 Clear your browser cache and restart the app.
 If the issue persists, feel free to reach out for further assistance.
 
-License
+**License**
 This project is released under the MIT License.
 
 
