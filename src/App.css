@@ -35,7 +35,7 @@ width: 100%;
 }
 
 .header_title{
-    margin: 20px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -79,7 +79,7 @@ nav ul li{
     background-color: #f1f1f1;
 }
 .search_hotel_location{
-    padding: 20px;
+    padding: 15px;
 }
 .search_hotel_location input{
     padding: 10px;
