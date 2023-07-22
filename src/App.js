@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Map from "./components/Map"
 import Header from "./components/header"
 import './App.css';
-import List from "./components/List";
 import { getHotels } from '../src/requests'
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
     <>
         <Header setCoordinates={setCoordinates} />
         <div className="app_container">
-                <List hotels={hotels}/>
                 <Map
                 setCoordinates={setCoordinates}
                 setBounds={setBounds}

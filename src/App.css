@@ -100,7 +100,8 @@ nav ul li{
 .search_hotel_location input{
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid var(--secondary-font-color);
+    border: 1px solid black;
+    border-radius: 50px;
     margin: 0 15px ;
 }
 

@@ -114,5 +114,3 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
 
 
 export default Map;
-
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-3.386925,36.682995&radius=800&keyword=hotels&key=AIzaSyAl5nMA3rjGiV58HYm1mSlqTmuBdkDmkMw
