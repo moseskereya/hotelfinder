@@ -113,7 +113,7 @@ nav ul li{
 
 
 /* popups */
-.popup-container {
+ .popup-container{
     position: fixed;
     top: 0;
     left: 0;
