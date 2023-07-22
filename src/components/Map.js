@@ -70,9 +70,9 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEYS }}
         defaultCenter={coordinates}
-        zoom={16}
+        zoom={14}
         center={coordinates}
-        defaultZoom={16}
+        defaultZoom={14}
         margin={[50, 50, 50, 50]}
         options={{
           disableDefaultUI: true,
