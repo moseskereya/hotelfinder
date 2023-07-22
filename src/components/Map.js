@@ -50,6 +50,8 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     lat={parseFloat(latitude)}
     lng={parseFloat(longitude)}
     onClick={() => handleMarkerClick(hotel)}
+    color='red'
+    fontSize={15}
     />
   );
 });
