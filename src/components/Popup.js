@@ -21,9 +21,7 @@ const Popup = ({ selectedHotel, onClose }) => {
     <div className='popup-container'>
     <div className="popup-content">
     <h3>{selectedHotel.name}</h3>
-      {selectedHotel.image && (
         <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={selectedHotel.name} />
-      )}
       {selectedHotel.rating && (
         <p>Rating: {selectedHotel.rating} {renderRatingStars()}</p>
       )}
