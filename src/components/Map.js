@@ -51,7 +51,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     lng={parseFloat(longitude)}
     onClick={() => handleMarkerClick(hotel)}
     color='red'
-    fontSize={15}
+    fontSize={20}
     />
   );
 });
