@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from 'react';
 import GoogleMapReact from 'google-map-react';
-import { FcRating} from "react-icons/fc"
 import { FaLocationArrow } from "react-icons/fa"
+import {HiLocationMarker} from "react-icons/hi"
+import {BiCurrentLocation} from "react-icons/bi"
 
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     const [userLocation, setUserLocation] = useState(null);
@@ -39,25 +40,28 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
       setCoordinates({ lat: userLocation.lat, lng: userLocation.lng });
       setBounds(null);
     }
-    };
+  };
 
-
-    
   const markers = hotels?.map((hotel) => {
-  const { latitude, longitude, name } = hotel;
+  const { latitude, longitude} = hotel;
   return (
-    <div
-      key={hotel.location_id}
-      lat={parseFloat(latitude)}
-      lng={parseFloat(longitude)}
-      className="marker-wrapper">
-      <div className="marker-label" onClick={() => handleMarkerClick(hotel)}>
-        {name}
-      </div>
-    </div>
+    <HiLocationMarker
+    key={hotel.location_id}
+    lat={parseFloat(latitude)}
+    lng={parseFloat(longitude)}
+    onClick={() => handleMarkerClick(hotel)}
+    />
   );
 });
 
+    const renderRatingStars = () => {
+        const rating = parseFloat(selectedHotel.rating); 
+        const fullStars = Math.floor(rating); 
+        const hasHalfStar = rating - fullStars >= 0.5;
+        const fullStarsComponent = '⭐️'.repeat(fullStars);
+        const halfStarComponent = hasHalfStar ? '⭐️' : '';
+      return `${fullStarsComponent}${halfStarComponent}`;
+    };
 
   return (
     <div className="map-container">
@@ -76,33 +80,28 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
             }}
               onChange={handleMapChange}>
         
-        {selectedHotel && (
-          <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
-            <div className="popup-card">
-              <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={selectedHotel.name} />
-              <h3>{selectedHotel.name}</h3>
-                 <div>
-                    <FcRating fontSize={10} />
-                    <FcRating fontSize={10}/>
-                    <FcRating fontSize={10}/>
-                    <FcRating fontSize={10}/>
-                    <span>
-                        {Number(selectedHotel.rating)}
-                     </span>
+            {selectedHotel && (
+              <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
+                <div className='popup-container'>
+                <div className="popup-content">
+                  <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={selectedHotel.name} />
+                  <h3>{selectedHotel.name}</h3>
+                      {setSelectedHotel.rating && (
+                        <p>Rating: {selectedHotel.rating} {renderRatingStars()}</p>
+                      )}
                     <p>Hotel reviews {Number(selectedHotel.num_reviews)}</p>
-                    <p>{selectedHotel.ranking}</p>
-                              
-                </div>            
-              <button onClick={handleClosePopup}>Close</button>
-            </div>
-          </div>
-        )}
-        
-        {userLocation && (
-          <div lat={userLocation.lat} lng={userLocation.lng}>
-            <div className="user-location-dot"></div>
-          </div>
-        )}
+                  <button onClick={handleClosePopup}>Close</button>
+                 </div>
+                </div>
+              </div>
+            )}
+            {userLocation && (
+              <div lat={userLocation.lat} lng={userLocation.lng}>
+                <div>
+                  <BiCurrentLocation color='blue'/>
+                </div>
+              </div>
+            )}
       {markers}
         </GoogleMapReact>
          <div className="go-back-home" onClick={handleGoBackHome}>
