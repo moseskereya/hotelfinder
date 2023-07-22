@@ -92,8 +92,6 @@ nav ul li{
     margin: 0 15px ;
 }
 
-
-
 .header_content{
     display: flex;
     justify-content: space-between;
@@ -112,19 +110,7 @@ nav ul li{
     object-fit: cover;
     border-radius: 10px;
 }
-/* show label */
-.marker-label {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 6px 9px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 
 /* popups */
 .popup-container {

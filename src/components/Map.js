@@ -96,7 +96,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
             {userLocation && (
               <div lat={userLocation.lat} lng={userLocation.lng}>
                 <div>
-                  <BiCurrentLocation color='blue'/>
+                  <BiCurrentLocation color='blue' fontSize={20} className='user-location-dot'/>
                 </div>
               </div>
             )}
