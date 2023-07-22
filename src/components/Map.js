@@ -3,7 +3,6 @@ import GoogleMapReact from 'google-map-react';
 import { FaLocationArrow } from "react-icons/fa"
 import {HiLocationMarker} from "react-icons/hi"
 import {BiCurrentLocation} from "react-icons/bi"
-import Popup from './Popup';
 
 const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     const [userLocation, setUserLocation] = useState(null);
@@ -30,7 +29,11 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     
     const handleMarkerClick = (hotel) => {
         setSelectedHotel(hotel);
-   };
+    };
+    
+     const handleClosePopup = () => {
+    setSelectedHotel(null);
+  };
 
  const handleGoBackHome = () => {
     if (userLocation) {
@@ -53,6 +56,15 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
   );
 });
 
+    const renderRatingStars = () => {
+        const rating = parseFloat(selectedHotel.rating); 
+        const fullStars = Math.floor(rating); 
+        const hasHalfStar = rating - fullStars >= 0.5;
+        const fullStarsComponent = '⭐️'.repeat(fullStars);
+        const halfStarComponent = hasHalfStar ? '⭐️' : '';
+      return `${fullStarsComponent}${halfStarComponent}`;
+    };
+
   return (
     <div className="map-container">
       <GoogleMapReact
@@ -69,8 +81,8 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
             draggable: true
             }}
               onChange={handleMapChange}>
-              {selectedHotel && <Popup selectedHotel={selectedHotel} onClose={() => this.setState({ selectedHotel: null })} />}           
-            {/* {selectedHotel && (
+        
+            {selectedHotel && (
               <div lat={selectedHotel.latitude} lng={selectedHotel.longitude} className='popup-container'>
                 <div className="popup-content">
                   <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={selectedHotel.name} />
@@ -80,7 +92,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
                   <button onClick={handleClosePopup}>Close</button>
                  </div>
               </div>
-            )} */}
+            )}
             
             {userLocation && (
               <div lat={userLocation.lat} lng={userLocation.lng}>
