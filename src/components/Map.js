@@ -51,7 +51,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
         lng={parseFloat(longitude)}
         onClick={() => handleMarkerClick(hotel)}
         color='red'
-        fontSize={25}
+        fontSize={30}
       />
     );
   });
@@ -80,8 +80,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
           zoomControl: true,
           draggable: true,
         }}
-        onChange={handleMapChange}
-      >
+        onChange={handleMapChange}>
         {userLocation && (
           <div lat={userLocation.lat} lng={userLocation.lng}>
             <div>
