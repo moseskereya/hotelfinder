@@ -110,7 +110,6 @@ nav ul li{
 
 
 /* popups */
-/* Popups */
 .popup-container {
     position: fixed;
     top: 0;
@@ -125,13 +124,10 @@ nav ul li{
   
   .popup-content {
     position: relative;
-    top: 50%;
-    left: 50%;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transform: translate(-50%, -50%);
     max-width: 400px;
     width: 80%;
   }
@@ -159,7 +155,7 @@ nav ul li{
     border-radius: 4px;
     cursor: pointer;
   }
-  
+/* //Popups */
 
 /* curreent user location */
 
