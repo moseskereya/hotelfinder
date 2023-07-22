@@ -18,9 +18,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 14px;
 }
-.app_container {
-    display: flex;
-}
+
 .map-container{
 height: 90vh;
 width: 100%;
