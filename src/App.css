@@ -22,9 +22,8 @@ body {
     display: flex;
 }
 .map-container{
-    height: 90vh;
-    width: 100%;
-    position: relative;
+height: 90vh;
+width: 100%;
 }
 
 .header{
@@ -113,7 +112,8 @@ nav ul li{
 
 
 /* popups */
- .popup-container{
+/* Popups */
+.popup-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -137,6 +137,7 @@ nav ul li{
     max-width: 400px;
     width: 80%;
   }
+  
   .popup-content img {
     width: 100%;
     max-height: 250px;
@@ -204,8 +205,6 @@ position: absolute;
     z-index: 10;
 }
 
-
-
 .hotel_container h6{
     color: gray;
     padding: 20px 0;
@@ -255,66 +254,18 @@ position: absolute;
     display: flex;
 }
 
-
-.hotel_container span {
-    color: var(--body-font-color);
-    font-size: 13px;
-}
-
-.loader {
-    margin: 50px auto;
-}
-
-.hotel_container h4 {
-    margin: 1.2rem 0;
-    color: var(--secondary-font-color);
-    font-size: 12px;
-}
-
-@media (max-width: 600px) {
-    .popup-content {
-      width: 80%;
-    }
-
-    .popup-content img {
-      width: 100%;
-      max-height: 100px;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-  }
-  
-
 @media screen and (max-width:768px) {
-    .hotel_content{
-        display: flex;
-        align-items: center;
-    }
-      
-    .hotel_content h4 {
-      font-style: 14px;
-      font-weight: 500;
-      margin: 8px;
-    }
-
-    .hotel_container img {
-        width: 95%;
-    }
     .go-back-home{
         bottom: 120px;
     }
-    .rating{
-        display: none;
+.popup-content {
+    width: 80%;
     }
-    .spinner{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .spinner img{
-        width: 100px;
-        height: 100px;
+    .popup-content img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
     }
 }
 
@@ -336,5 +287,14 @@ position: absolute;
     }
     .location{
         display: none;
+    }
+    .popup-content {
+        width: 80%;
+      }
+    .popup-content img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
     }
 }
