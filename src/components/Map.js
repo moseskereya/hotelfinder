@@ -83,14 +83,16 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
               onChange={handleMapChange}>
         
             {selectedHotel && (
-              <div lat={selectedHotel.latitude} lng={selectedHotel.longitude} className='popup-container'>
-                <div className="popup-content">
+              <div className='popup-container'>
+              <div className="popup-content">
+               <div lat={selectedHotel.latitude} lng={selectedHotel.longitude}>
                   <img src={selectedHotel.photo ? selectedHotel.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={selectedHotel.name} />
                   <h3>{selectedHotel.name}</h3>
                   <p>Rating: {selectedHotel.rating} {renderRatingStars()}</p>
                   <p>Hotel reviews {Number(selectedHotel.num_reviews)}</p>
                   <button onClick={handleClosePopup}>Close</button>
                  </div>
+               </div>
               </div>
             )}
             
