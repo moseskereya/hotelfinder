@@ -68,7 +68,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
   return (
     <div className='map-container'>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEYS }}
+        bootstrapURLKeys={{ key:process.env.GOOGLE_API_KEYS}}
         defaultCenter={coordinates}
         zoom={14}
         center={coordinates}
