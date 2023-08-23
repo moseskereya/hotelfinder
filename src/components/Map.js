@@ -107,7 +107,7 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
                 Rating: {selectedHotel.rating} {renderRatingStars()}
               </p>
               <p>Hotel reviews {Number(selectedHotel.num_reviews)}</p>
-              {selectedHotel.business_listings?.mobile_contacts > 1 && (
+              {selectedHotel.business_listings?.mobile_contacts.length > 1 && (
                  <h3>Check for Reservations</h3>
               )} 
               <button onClick={handleClosePopup}>Close</button>
