@@ -1,4 +1,5 @@
 ![Screenshot 2023-07-23 223151](https://github.com/moseskereya/hotelfinder/assets/49228545/5dd9a102-1a39-4c5f-b792-ea86f769668d)
+![Screenshot 2023-08-25 111836](https://github.com/moseskereya/hotelfinder/assets/49228545/86350509-252f-4287-9da0-3f8ab93355d2)
 
 **FindMyStay - Discover Hotels with Google Maps**
 
