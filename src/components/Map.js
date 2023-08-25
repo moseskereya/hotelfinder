@@ -103,11 +103,13 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
                 alt={selectedHotel.name}
               />
               <h3>{selectedHotel.name}</h3>
+              <p>{selectedHotel.hotel_class}</p>
               <p>
                 Rating: {selectedHotel.rating} {renderRatingStars()}
               </p>
-              <p>Price Range{selectedHotel.price}</p>
-              <p>Hotel reviews {Number(selectedHotel.num_reviews)}</p>
+              <p>Price Range: {selectedHotel.price}</p>
+              <p>Hotel reviews: {Number(selectedHotel.num_reviews)}</p>
+              <p>{selectedHotel.ranking}</p>
               {selectedHotel.business_listings.mobile_contacts?.[0]?.value && (
                   <p>
                     <a href={selectedHotel.business_listings.mobile_contacts?.[0]?.value} target="_blank" rel="noopener noreferrer">
