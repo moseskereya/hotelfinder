@@ -65,13 +65,6 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     return `${fullStarsComponent}${halfStarComponent}`;
   };
 
-  if (!selectedHotel || !selectedHotel.business_listings) {
-    return null; 
-  }
-
-  const websiteLink = selectedHotel.business_listings?.mobile_contacts?.[0]?.value || '';
-
-
   return (
     <div className='map-container'>
       <GoogleMapReact
@@ -113,16 +106,16 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
               <p>
                 Rating: {selectedHotel.rating} {renderRatingStars()}
               </p>
-              <p>{selectedHotel.price}</p>
+              <p>Price Range{selectedHotel.price}</p>
               <p>Hotel reviews {Number(selectedHotel.num_reviews)}</p>
-              {websiteLink && (
+              {selectedHotel.business_listings.mobile_contacts?.[0]?.value && (
                   <p>
-                    Hotel Website:{' '}
-                    <a href={websiteLink} target="_blank" rel="noopener noreferrer">
-                      {websiteLink}
+                    <a href={selectedHotel.business_listings.mobile_contacts?.[0]?.value} target="_blank" rel="noopener noreferrer">
+                      Check for Reservation
                     </a>
                   </p>
                 )}
+
               <button onClick={handleClosePopup}>Close</button>
             </div>
           </div>
