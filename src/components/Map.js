@@ -65,6 +65,10 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
     return `${fullStarsComponent}${halfStarComponent}`;
   };
 
+  if (!selectedHotel || !selectedHotel.business_listings) {
+    return null; 
+  }
+
   const websiteLink = selectedHotel.business_listings?.mobile_contacts?.[0]?.value || '';
 
 
@@ -111,7 +115,14 @@ const Map = ({ setCoordinates, hotels, setBounds, coordinates }) => {
               </p>
               <p>{selectedHotel.price}</p>
               <p>Hotel reviews {Number(selectedHotel.num_reviews)}</p>
-              <p>Hotel Website: <a href={websiteLink} target="_blank" rel="noopener noreferrer">{websiteLink}</a></p>
+              {websiteLink && (
+                  <p>
+                    Hotel Website:{' '}
+                    <a href={websiteLink} target="_blank" rel="noopener noreferrer">
+                      {websiteLink}
+                    </a>
+                  </p>
+                )}
               <button onClick={handleClosePopup}>Close</button>
             </div>
           </div>
